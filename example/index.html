@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue-zoom-on-hover DEMO</title>
+<body>
+  <div id="app">
+    <div style="width:400px">
+      <zoom-on-hover img-normal="demo.jpg"></zoom-on-hover>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  <script type="module">
+    import ZoomOnHover from "../dist/index.esm.min.js";
+    Vue.use(ZoomOnHover);
+    new Vue({
+      el: "#app"
+    })
+  </script>
+</head>
+</body>
+</html>

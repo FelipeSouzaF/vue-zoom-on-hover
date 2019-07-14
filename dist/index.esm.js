@@ -3,8 +3,6 @@
  * (c) Ivan Alexandrov
  * Released under the GPL-3.0 License.
  */
-'use strict';
-
 //
 //
 //
@@ -316,4 +314,4 @@ var index = {
   }
 };
 
-module.exports = index;
+export default index;
