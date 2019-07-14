@@ -5,6 +5,11 @@ Vue.js component that shows the full image or a scaled image in the image area o
 [Live demo](https://rundik.github.io/vue-zoom-on-hover/example/)
 
 ## Usage
+Install package:
+```bash
+npm i vue-zoom-on-hover
+```
+
 Register the component:
 ```js
 import ZoomOnHover from "vue-zoom-on-hover";
