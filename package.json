@@ -1,6 +1,6 @@
 {
-  "name": "@rundik/vue-zoom-on-hover",
-  "version": "1.1.1",
+  "name": "vue-zoom-on-hover",
+  "version": "1.0.0",
   "description": "Vue.js component that shows the full image or a scaled image in the image area on hover",
   "main": "./dist/index.js",
   "scripts": {
