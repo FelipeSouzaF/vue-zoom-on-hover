@@ -1,4 +1,11 @@
 # vue-zoom-on-hover
+
+![last commit](https://img.shields.io/github/last-commit/Rundik/vue-zoom-on-hover.svg)
+![version](https://img.shields.io/npm/v/vue-zoom-on-hover.svg)
+![downloads](https://img.shields.io/npm/dm/vue-zoom-on-hover.svg)
+![gziped](https://img.badgesize.io/https://unpkg.com/vue-zoom-on-hover@latest/dist/index.esm.min.js?compression=gzip)
+![license](https://img.shields.io/npm/l/vue-zoom-on-hover.svg)
+
 Vue.js component that shows the full image or a scaled image in the image area on hover. Forked from [here](https://github.com/Intera/vue-zoom-on-hover)
 
 ## Demo
