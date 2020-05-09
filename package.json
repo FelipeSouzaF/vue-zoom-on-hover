@@ -1,5 +1,5 @@
 {
-  "name": "vue-zoom-on-hover",
+  "name": "@epilefapps/vue-zoom-on-hover",
   "version": "1.0.3",
   "description": "Vue.js component that shows the full image or a scaled image in the image area on hover",
   "main": "./dist/index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rundik/vue-zoom-on-hover.git"
+    "url": "git+https://github.com/FelipeSouzaF/vue-zoom-on-hover.git"
   },
   "author": "Felipe de Souza Farias",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Rundik/vue-zoom-on-hover/issues"
+    "url": "https://github.com/FelipeSouzaF/vue-zoom-on-hover/issues"
   },
-  "homepage": "https://github.com/Rundik/vue-zoom-on-hover#readme",
+  "homepage": "https://github.com/FelipeSouzaF/vue-zoom-on-hover#readme",
   "files": [
     "dist/*"
   ],
@@ -26,5 +26,8 @@
     "rollup-plugin-vue": "^5.0.1",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
+  },
+  "directories": {
+    "example": "example"
   }
 }
