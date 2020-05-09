@@ -38,27 +38,35 @@ var script = {
     },
     zoom: function zoom() {
       if (this.disabled) return;
-      this.$refs.zoom.style.opacity = 1;
-      this.$refs.normal.style.opacity = 0;
+      if (this.$refs.zoom) this.$refs.zoom.style.opacity = 1;
+      if (this.$refs.normal) this.$refs.normal.style.opacity = 0;
     },
     unzoom: function unzoom() {
       if (this.disabled) return;
-      this.$refs.zoom.style.opacity = 0;
-      this.$refs.normal.style.opacity = 1;
+      if (this.$refs.zoom) this.$refs.zoom.style.opacity = 0;
+      if (this.$refs.normal) this.$refs.normal.style.opacity = 1;
     },
     move: function move(event) {
       if (this.disabled) return;
       var offset = this.pageOffset(this.$el);
       var zoom = this.$refs.zoom;
       var normal = this.$refs.normal;
-      var relativeX = event.clientX - offset.x + window.pageXOffset;
-      var relativeY = event.clientY - offset.y + window.pageYOffset;
-      var normalFactorX = relativeX / normal.offsetWidth;
-      var normalFactorY = relativeY / normal.offsetHeight;
-      var x = normalFactorX * (zoom.offsetWidth * this.scaleFactor - normal.offsetWidth);
-      var y = normalFactorY * (zoom.offsetHeight * this.scaleFactor - normal.offsetHeight);
-      zoom.style.left = -x + "px";
-      zoom.style.top = -y + "px";
+      if (offset) {
+        var relativeX = event.clientX - offset.x + window.pageXOffset;
+        var relativeY = event.clientY - offset.y + window.pageYOffset;
+      }
+      if (normal) {
+        var normalFactorX = relativeX / normal.offsetWidth;
+        var normalFactorY = relativeY / normal.offsetHeight;
+      }
+      if (normal && zoom) {
+        var x = normalFactorX * (zoom.offsetWidth * this.scaleFactor - normal.offsetWidth);
+        var y = normalFactorY * (zoom.offsetHeight * this.scaleFactor - normal.offsetHeight);
+      }
+      if (zoom) {
+        zoom.style.left = -x + "px";
+        zoom.style.top = -y + "px";
+      }
     },
     initEventLoaded: function initEventLoaded() {
       // emit the "loaded" event if all images have been loaded
@@ -264,6 +272,7 @@ var __vue_render__ = function __vue_render__() {
     staticClass: "zoom-on-hover",
     on: {
       "mousemove": _vm.move,
+      "pointerenter": _vm.move,
       "mouseenter": _vm.zoom,
       "mouseleave": _vm.unzoom
     }

@@ -1,6 +1,6 @@
 {
   "name": "vue-zoom-on-hover",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue.js component that shows the full image or a scaled image in the image area on hover",
   "main": "./dist/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Rundik/vue-zoom-on-hover.git"
   },
-  "author": "Ivan Alexandrov",
+  "author": "Felipe de Souza Farias",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Rundik/vue-zoom-on-hover/issues"
