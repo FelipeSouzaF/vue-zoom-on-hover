@@ -48,6 +48,10 @@ var script = {
     },
     move: function move(event) {
       if (this.disabled) return;
+      if (event.changedTouches) {
+        event.preventDefault()
+        event = event.changedTouches[0]
+      }
       var offset = this.pageOffset(this.$el);
       var zoom = this.$refs.zoom;
       var normal = this.$refs.normal;
@@ -272,9 +276,11 @@ var __vue_render__ = function __vue_render__() {
     staticClass: "zoom-on-hover",
     on: {
       "mousemove": _vm.move,
-      "pointerenter": _vm.move,
       "mouseenter": _vm.zoom,
-      "mouseleave": _vm.unzoom
+      "mouseleave": _vm.unzoom,
+      "touchmove": _vm.move,
+      "touchstart": _vm.zoom,
+      "touchend": _vm.unzoom
     }
   }, [_c('img', {
     ref: "normal",
